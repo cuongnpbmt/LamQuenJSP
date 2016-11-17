@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 1, 2016 9:15:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.javaweb.model.Users" table="users" catalog="db_qlsp" optimistic-lock="version">
+        <id name="idUser" type="java.lang.Integer">
+            <column name="IdUser" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="UserName" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="Email" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="pwd" type="string">
+            <column name="Pwd" length="45" not-null="true" />
+        </property>
+        <property name="fullName" type="string">
+            <column name="FullName" length="45" not-null="true" />
+        </property>
+        <property name="birthDay" type="timestamp">
+            <column name="BirthDay" length="19" />
+        </property>
+        <property name="gender" type="java.lang.Boolean">
+            <column name="Gender" />
+        </property>
+        <property name="note" type="string">
+            <column name="Note" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
